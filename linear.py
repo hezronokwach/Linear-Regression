@@ -26,4 +26,9 @@ gradient = tempGradient / tempC
 c = meanY - (gradient * meanX)
 print("gradient", gradient)
 print("c", c)
+tempGrad = 0
+for i in (xValues):
+    tempGrad += (xValues[i] - meanX) * (yValues[i]-meanY)
+pc = tempGrad / (len(xValues)-1)
+print("pc", pc)
 
