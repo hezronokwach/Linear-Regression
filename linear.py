@@ -31,5 +31,7 @@ for i in (xValues):
     tempGrad += (xValues[i] - meanX) * (yValues[i]-meanY)
 pc = tempGrad / (len(xValues)-1)
 print("pc", pc)
-print("y = <%.6f>x + <%.10f>" % (gradient, c))
+print("y = <%.6f>x + <%.6f>" % (gradient, c))
+print("<%.10f>" % (pc))
+
 
