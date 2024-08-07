@@ -1,37 +1,53 @@
 import statistics
+import sys
 
-with open('data.txt','r') as file:
-    lines = file.readlines()
+def read_data(file_path):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
     
-xValues = []
-yValues = []
-for index ,line  in enumerate(lines):
-    try:
-        number = int(line.strip())
-        xValues.append(index)
-        yValues.append(number)
-    except ValueError:
-        continue
+    x_values = []
+    y_values = []
+    for index, line in enumerate(lines):
+        try:
+            number = int(line.strip())
+            x_values.append(index)
+            y_values.append(number)
+        except ValueError:
+            continue
+    
+    return x_values, y_values
 
-meanX = statistics.mean(xValues)
-meanY = statistics.mean(yValues)
-print("x mean:",meanX)
-print("y mean", meanY)
-tempGradient = 0
-tempC = 0
-for i in (xValues):
-    tempGradient += (xValues[i] - meanX) * (yValues[i]-meanY)
-    tempC += (xValues[i] - meanX) ** 2
-gradient = tempGradient / tempC
-c = meanY - (gradient * meanX)
-print("gradient", gradient)
-print("c", c)
-tempGrad = 0
-for i in (xValues):
-    tempGrad += (xValues[i] - meanX) * (yValues[i]-meanY)
-pc = tempGrad / (len(xValues)-1)
-print("pc", pc)
-print("y = <%.6f>x + <%.6f>" % (gradient, c))
-print("<%.10f>" % (pc))
+def calculate_statistics(x_values, y_values):
+    mean_x = statistics.mean(x_values)
+    mean_y = statistics.mean(y_values)
+    
+    temp_gradient = 0
+    temp_c = 0
+    for i in range(len(x_values)):
+        temp_gradient += (x_values[i] - mean_x) * (y_values[i] - mean_y)
+        temp_c += (x_values[i] - mean_x) ** 2
+    
+    gradient = temp_gradient / temp_c
+    c = mean_y - (gradient * mean_x)
+    
+    temp_grad = 0
+    for i in range(len(x_values)):
+        temp_grad += (x_values[i] - mean_x) * (y_values[i] - mean_y)
+    pc = temp_grad / (len(x_values) - 1)
+    
+    return gradient, c, pc
 
+def main(file_path):
+    x_values, y_values = read_data(file_path)
+    gradient, c, pc = calculate_statistics(x_values, y_values)
+    
+    print("y = <%.6f>x + <%.6f>" % (gradient, c))
+    print("<%.10f>" % (pc))
 
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python3 script.py <file_path>")
+        exit
+    else:
+        file_path = sys.argv[1]
+        main(file_path)
