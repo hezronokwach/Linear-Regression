@@ -67,7 +67,11 @@ For the intercept \( c \):
 
 ![intercept](https://latex.codecogs.com/svg.image?$$c=%5Cbar%7By%7D-m%5Cbar%7Bx%7D$$)
 
-Where ![barx](https://latex.codecogs.com/svg.image?$%5Cbar%7Bx%7D$) and ![bary](https://latex.codecogs.com/svg.image?$%5Cbar%7By%7D$) are the means of the x  and y values, respectively.
+Where:
+
+![barx](https://latex.codecogs.com/svg.image?$%5Cbar%7Bx%7D$) and ![bary](https://latex.codecogs.com/svg.image?$%5Cbar%7By%7D$) are the means of the x  and y values, respectively.
+
+![xi](https://latex.codecogs.com/svg.image?$x_i$) and ![yi](https://latex.codecogs.com/svg.image?$y_i$) are the current values of x and y
 
 ## Pearson correlation coefficient
 
@@ -93,6 +97,13 @@ Where:
 The covariance ![covxy](https://latex.codecogs.com/svg.image?$%5Ctext%7Bcov%7D(x,y)$) is calculated by:
 
 ![Covariance](https://latex.codecogs.com/svg.image?$$%5Ctext%7Bcov%7D(x,y)=%5Cfrac%7B%5Csum%7B(x_i-%5Cbar%7Bx%7D)(y_i-%5Cbar%7By%7D)%7D%7D%7Bn-1%7D$$)
+
+Where:
+
+n is the total number of data entries
+
+![barx](https://latex.codecogs.com/svg.image?$%5Cbar%7Bx%7D$) and ![bary](https://latex.codecogs.com/svg.image?$%5Cbar%7By%7D$) are the means of the x  and y values, respectively.
+![xi](https://latex.codecogs.com/svg.image?$x_i$) and ![yi](https://latex.codecogs.com/svg.image?$y_i$) are the current values of x and y
 
 ## Script Explanation
 
