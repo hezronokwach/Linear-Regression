@@ -31,9 +31,11 @@ def calculate_statistics(x_values, y_values):
     c = mean_y - (gradient * mean_x)
     
     temp_grad = 0
-    for i in range(len(x_values)):
+    for i in range(len(y_values)):
         temp_grad += (x_values[i] - mean_x) * (y_values[i] - mean_y)
-    pc = temp_grad / (len(x_values) - 1)
+    covxy = temp_grad / (len(x_values) - 1)
+    stdev = statistics.stdev(x_values) * statistics.stdev(y_values)
+    pc = covxy / stdev
     
     return gradient, c, pc
 
