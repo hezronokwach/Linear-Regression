@@ -43,19 +43,17 @@ Pearson Correlation Coefficient: -0.5330331012
 ## Linear Regression Line
 
 The linear regression line is a straight line that best fits the data points. It is represented by the equation:
-$$
-y=mx+c
-$$
+https://latex.codecogs.com/svg.image?$$y=mx&plus;c$$
 
 Where:
 
-$ y $ is the dependent variable.
+y  is the dependent variable.
 
-$ x $ is the independent variable.
+x is the independent variable.
 
-$ m $ is the gradient of the line.
+m is the gradient of the line.
 
-$ c $ is the y-intercept.
+c is the y-intercept.
 
 ## Calculation in the Program
 
@@ -63,12 +61,11 @@ The script calculates the slope (m) and intercept (c) using the formulas:
 
 For the gradient \( m \):
 
-$$ m = \frac{\sum{(x_i - \bar{x})(y_i - \bar{y})}}{\sum{(x_i - \bar{x})^2}} $$
+https://latex.codecogs.com/svg.image?$$m=%5Cfrac%7B%5Csum%7B(x_i-%5Cbar%7Bx%7D)(y_i-%5Cbar%7By%7D)%7D%7D%7B%5Csum%7B(x_i-%5Cbar%7Bx%7D)%5E2%7D%7D$$
 
 For the intercept \( c \):
 
-$$ c = \bar{y} - m\bar{x} $$
-
+https://latex.codecogs.com/svg.image?$$c=%5Cbar%7By%7D-m%5Cbar%7Bx%7D$$
 
 Where $ \bar{x} $ and $ \bar{y} $ are the means of the $ x $ and $ y $ values, respectively.
 
