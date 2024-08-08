@@ -86,21 +86,17 @@ The script calculates the Pearson correlation coefficient using the formula:
 
 For the Pearson correlation coefficient \( r \):
 
-$$ r = \frac{\text{cov}(x, y)}{\sigma_x \sigma_y} $$
+![Pearson Correlation Coefficient](https://latex.codecogs.com/svg.latex?r%20%3D%20%5Cfrac%7B%5Ctext%7Bcov%7D%28x%2C%20y%29%7D%7B%5Csigma_x%20%5Csigma_y%7D)
 
 Where:
-$\text{cov}(x, y)$ is the covariance of $x$ and $y$,
+- $\text{cov}(x, y)$ is the covariance of $x$ and $y$,
+- $\sigma_x$ is the standard deviation of $x$,
+- $\sigma_y$ is the standard deviation of $y$.
 
-$\sigma_x$ is the standard deviation of $x$,
+The covariance $\text{cov}(x, y)$ is calculated by:
 
-$\sigma_y$ is the standard deviation of $y$.
+![Covariance](https://latex.codecogs.com/svg.latex?%5Ctext%7Bcov%7D%28x%2C%20y%29%20%3D%20%5Cfrac%7B%5Csum%7B%28x_i%20-%20%5Cbar%7Bx%7D%29%28y_i%20-%20%5Cbar%7By%7D%29%7D%7Bn-1%7D)
 
-The covariance \(\text{cov}(x, y)\) is calculated by:
-
-$$ \text{cov}(x, y) = \frac{\sum{(x_i - \bar{x})(y_i - \bar{y})}}{n-1} $$
-
-
-Where $ \bar{x} $ and $ \bar{y} $ are the means of the $ x $ and $ y $ values, respectively.
 
 ## Script Explanation
 
