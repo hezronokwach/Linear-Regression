@@ -78,9 +78,11 @@ Where:
 
 The Pearson correlation coefficient  \( r \) measures the strength and direction of the linear relationship between two variables. It ranges from -1 to 1, where:
 
-    1 indicates a perfect positive linear relationship.
-    -1 indicates a perfect negative linear relationship.
-    0 indicates no linear relationship.
+1 indicates a perfect positive linear relationship.
+
+-1 indicates a perfect negative linear relationship.
+
+0 indicates no linear relationship.
 
 ## Calculation in the Program
 
