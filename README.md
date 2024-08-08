@@ -61,6 +61,7 @@ The script calculates the slope (m) and intercept (c) using the formulas:
 
 For the gradient \( m \):
 
+
 ![gradient](https://latex.codecogs.com/svg.image?$$m=%5Cfrac%7B%5Csum%7B(x_i-%5Cbar%7Bx%7D)(y_i-%5Cbar%7By%7D)%7D%7D%7B%5Csum%7B(x_i-%5Cbar%7Bx%7D)%5E2%7D%7D$$)
 
 For the intercept \( c \):
@@ -103,6 +104,7 @@ Where:
 n is the total number of data entries
 
 ![barx](https://latex.codecogs.com/svg.image?$%5Cbar%7Bx%7D$) and ![bary](https://latex.codecogs.com/svg.image?$%5Cbar%7By%7D$) are the means of the x  and y values, respectively.
+
 ![xi](https://latex.codecogs.com/svg.image?$x_i$) and ![yi](https://latex.codecogs.com/svg.image?$y_i$) are the current values of x and y
 
 ## Script Explanation
