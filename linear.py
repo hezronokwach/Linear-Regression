@@ -48,7 +48,8 @@ def calculate_statistics(x_values, y_values):
     stdev_y = statistics.stdev(y_values)
     stdev = stdev_x * stdev_y
     if stdev == 0:
-        raise ValueError("Standard deviation cannot be zero.")
+        print("Standard deviation cannot be 0")
+        return
 
     pc = covxy / stdev
 
@@ -62,7 +63,7 @@ def main(file_path):
     x_values, y_values, is_empty = read_data(file_path)
 
     if is_empty:
-        print(f"Error: The file '{file_path}' is empty.")
+        print(f"The file '{file_path}' is empty.")
         return
     try:
         gradient, c, pc = calculate_statistics(x_values, y_values)
@@ -82,5 +83,5 @@ if __name__ == "__main__":
     try:
         main(file_path)
     except FileNotFoundError:
-        print(f"Error: The file '{file_path}' does not exist.")
+        print(f"The file '{file_path}' does not exist.")
         exit()
