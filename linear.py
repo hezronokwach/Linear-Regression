@@ -43,8 +43,8 @@ def main(file_path):
     x_values, y_values = read_data(file_path)
     gradient, c, pc = calculate_statistics(x_values, y_values)
     
-    print("Linear Regression: y = <%.6f>x + <%.6f>" % (gradient, c))
-    print("Pearson Correlation Coefficient: <%.10f>" % (pc))
+    print("Linear Regression: y = %.6fx + %.6f" % (gradient, c))
+    print("Pearson Correlation Coefficient: %.10f" % (pc))
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
